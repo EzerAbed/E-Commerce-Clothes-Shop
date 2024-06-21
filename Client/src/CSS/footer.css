@@ -1,0 +1,29 @@
+.footerContainer{
+    background-color: #eff2f6;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about{
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.socialMedia{
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.support{
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.about img{
+    width : 300px;
+    height: 50px;
+}
+

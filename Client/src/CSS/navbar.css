@@ -1,0 +1,114 @@
+
+.navbar {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.navbarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+}
+
+.navbarLogo img {
+    width: 300px;
+    height: 50px;
+}
+
+.navbarSearch input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 600px;
+}
+
+.menuContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+}
+
+.categoryIcon {
+    display: flex;
+    align-items: center;
+}
+
+.categoryIcon svg{
+    margin: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff9800;
+}
+
+.navbarIcons {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.navbarIcons svg {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+}
+
+.cartIcon {
+    position: relative;
+}
+
+.badge {
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .navbarSearch input {
+        width: 150px;
+    }
+}
+
+.moon{
+    color: grey;
+}
+
+.sun{
+    color: #e88b2e;
+}
