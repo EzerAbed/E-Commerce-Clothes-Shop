@@ -28,12 +28,21 @@
     width: 600px;
 }
 
-.menuContainer{
+.menuContainer.light{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     background-color: white;
+}
+
+.menuContainer.dark{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #141824;
+    color: white;
 }
 
 .categoryIcon {
@@ -59,7 +68,7 @@
 }
 
 .menu a {
-    color: black;
+    color: gray;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -111,4 +120,12 @@
 
 .sun{
     color: #e88b2e;
+}
+
+.category.light{
+    color: black;
+}
+
+.category.dark{
+    color: white;
 }

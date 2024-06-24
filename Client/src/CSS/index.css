@@ -1,5 +1,11 @@
-body {
+body.light {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f7fa;
+}
+
+body.dark {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f111a;
 }

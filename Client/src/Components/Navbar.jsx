@@ -2,8 +2,22 @@ import React from 'react';
 import { FaMoon, FaShoppingCart, FaBell, FaUser, FaSun } from 'react-icons/fa';
 import { TfiAlignJustify } from "react-icons/tfi"
 import '../CSS/navbar.css';
+import ThemeContext from "../Context/ThemeContext"
+import { useContext, useState, useEffect } from'react'
 
 const Navbar = () => {
+
+    //Context management
+    let {theme, setTheme} = useContext(ThemeContext)
+
+    //state management
+    let [itemCount, setItemCount] = useState(0)
+
+    //Managing the change of theme
+    useEffect(() => {
+        document.body.className = theme
+    },[theme])
+
     return (
         <>
             <nav className="navbar">
@@ -15,21 +29,22 @@ const Navbar = () => {
                         <input type="text" placeholder="Search" />
                     </div>
                 
-                    <div className="navbarIcons">
-                        <FaMoon className='moon'/>
-                        <FaSun className='sun'/>
-                        <div className="cartIcon">
-                            <FaShoppingCart />
-                            <span className="badge">3</span>
+                    <div className={`navbarIcons ${theme}`}>
+                        <div onClick={() => {setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))}}>
+                            {theme === 'light' ? <FaSun className="sun" /> : <FaMoon className="moon" />}
                         </div>
-                        <FaBell />
-                        <FaUser />
+                        <div className="cartIcon">
+                            <FaShoppingCart className={`category ${theme}`}/>
+                            <span className="badge"> {itemCount} </span>
+                        </div>
+                        <FaBell className={`category ${theme}`}/>
+                        <FaUser className={`category ${theme}`}/>
                     </div>
                 </div>
             </nav>
-            <div className='menuContainer'>
+            <div className={`menuContainer ${theme}`}>
                 <div className='categoryIcon'>
-                    <TfiAlignJustify />
+                    <TfiAlignJustify className={`category ${theme}`}/>
                     <span className='text'>category</span>
                 </div>
                 <ul className="menu">
