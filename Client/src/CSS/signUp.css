@@ -1,0 +1,65 @@
+.signUpContainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    height: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+
+.buttonSignUp{
+    width: 400px;
+    height: 50px;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    color: white;
+    background-color: black;
+}
+
+.buttonLogIn{
+    width: 400px;
+    height: 50px;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    color: white;
+    background-color: gray;
+}
+
+.signUpForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signUpForm input{
+    width: 400px;
+    height: 30px;
+    border: 1px gray solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.submitBtn{
+    width:300px;
+    height: 50px;
+    border: none;
+    background-color: gray;
+    color: white;
+    border-radius: 50px;
+    margin: 20px;
+}

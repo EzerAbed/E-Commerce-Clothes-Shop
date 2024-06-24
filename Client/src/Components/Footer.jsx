@@ -1,10 +1,16 @@
 import '../CSS/footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook ,  faInstagram , faTwitter} from '@fortawesome/free-brands-svg-icons';
+import { useContext } from 'react';
+import ThemeContext from "../Context/ThemeContext"
 
 const Footer = () => {
+
+    //theme management
+    let {theme} = useContext(ThemeContext)
+
     return(
-        <div className='footerContainer'>
+        <div className= {`footerContainer ${theme} `} >
             <div className='about'>
                 <img src="https://placeholderimage.eu/api/id/1" alt="Logo" />
                 <p>
