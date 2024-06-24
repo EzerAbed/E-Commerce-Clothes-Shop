@@ -1,9 +1,14 @@
 import '../CSS/signUp.css'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { useNavigate } from 'react-router-dom'
+import ThemeContext from "../Context/ThemeContext"
 
 const SignUp = () => {
+
+    //context management
+    let {theme} = useContext(ThemeContext)
     
     //state Management
     const [username, setUsername] = useState('')
@@ -28,16 +33,22 @@ const SignUp = () => {
         }
     }
 
+    //navugate to login page
+    const navigate = useNavigate()
+    const handleLogIn = () => {
+        navigate('/login')
+    }
+
     return (
         <>
             <ToastContainer />
-            <div className='signUpContainer' >
+            <div className={`signUpContainer ${theme}`} >
                 <div className='buttons'>
                     <button className='buttonSignUp'> Sign Up </button>
-                    <button className='buttonLogIn'> Log In </button>
+                    <button className='buttonLogIn' onClick={handleLogIn}> Log In </button>
                 </div>
                 <h1 className='h1_signUp' >Sign Up</h1>
-                <form onSubmit={handleSubmit} className='signUpForm'>
+                <form onSubmit={handleSubmit} className={`signUpForm ${theme}`}>
                     <input 
                     type="text" 
                     placeholder="Username" 
@@ -64,7 +75,7 @@ const SignUp = () => {
 
                     <button 
                     type="submit" 
-                    className='submitBtn'>Sign Up</button>
+                    className='submitBtn'>Create a new account</button>
                 </form>
             </div>
         </>

@@ -129,3 +129,38 @@
 .category.dark{
     color: white;
 }
+
+.logInBtn button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logInBtn.light button {
+    background-color: #f0f0f0;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logInBtn.light button:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.logInBtn.dark button {
+    background-color: #333;
+    color: #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+  
+.logInBtn.dark button:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.navbarSearch.dark input{
+    background-color: #181c28;
+}

@@ -1,7 +1,7 @@
-import ThemeContext from "./Context/ThemeContext"
+import ThemeContext from "../Context/ThemeContext"
 import { useState } from "react"
 
-const ContextManger = ({ children }) => {
+const ThemeManger = ({ children }) => {
     const [theme, setTheme] = useState("light")
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>
@@ -10,4 +10,4 @@ const ContextManger = ({ children }) => {
     )
 }
 
-export default ContextManger
+export default ThemeManger

@@ -1,0 +1,59 @@
+.productCardContainer{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    position: relative;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.productCardContainer.dark{
+    background-color: #20232a;
+    color: white;
+}
+
+.heartIcon{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: gray;
+}
+  
+.red{
+    color: #ff0000;
+}
+  
+.productImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+  
+.productInfo {
+    margin-top: 15px;
+}
+  
+.productTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+  
+.raters {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #888;
+}
+  
+.price {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+  
+.colors {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #888;
+}
+  
