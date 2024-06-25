@@ -8,6 +8,7 @@ import SignUp from './Pages/SignUp'
 import Login from './Pages/LogIn'
 import Products from './Pages/Products'
 import NotFound from './Pages/NotFound'
+import Profile from './Pages/Profile'
 function App() {
   return (
     <Routes>
@@ -17,6 +18,7 @@ function App() {
         <Route path='/Signup' element={<SignUp />} />
         <Route path='/Login' element={<Login />} />
         <Route path='*' element={<NotFound />} />
+        <Route path='/profile' element={<Profile />} />
       </Route>
     </Routes>
   )

@@ -1,0 +1,44 @@
+.profileContainer{
+    width: 90%;
+    margin: auto;
+}
+
+.topSide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pbtns {
+    display: flex; 
+}
+
+.pbtns button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    width: 180px;
+    height: 40px;
+    border: 1px solid gray;
+    background: none; 
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.pbtns button:hover{
+    background-color: rgba(176, 196, 222, 0.301);
+}
+
+.pbtns button span {
+    margin-left: 5px; 
+}
+
+.Del {
+    color: red;
+}
+
+.changePWD {
+    color: grey;
+}

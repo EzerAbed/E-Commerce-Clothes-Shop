@@ -41,7 +41,7 @@ const Navbar = () => {
                             <span className="badge"> {itemCount} </span>
                         </div>
                         <FaBell className={`category ${theme}`}/>
-                        {user? <FaUser className={`category ${theme}`}/> : <Link to="/login" className={`logInBtn ${theme}`}> <button>Log in</button> </Link> }
+                        {user? <Link to="/profile"><FaUser className={`category ${theme}`}/></Link> : <Link to="/login" className={`logInBtn ${theme}`}> <button>Log in</button> </Link> }
                     </div>
                 </div>
             </nav>
