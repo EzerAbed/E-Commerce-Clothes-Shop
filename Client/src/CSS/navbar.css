@@ -20,12 +20,29 @@
     height: 50px;
 }
 
+.navbarSearch {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 10px;
+    color: #ccc;
+}
+
 .navbarSearch input {
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
     outline: none;
     width: 600px;
+    height: 30px;
+    padding-left: 30px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.navbarSearch input::placeholder{
+    padding: 10px;
 }
 
 .menuContainer.light{
@@ -163,4 +180,52 @@
 
 .navbarSearch.dark input{
     background-color: #181c28;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 150px;
+    display: none;
+    flex-direction: column;
+}
+
+.dropdownMenu.dark{
+    background-color: #141824;
+}
+
+.dropdownMenu.light{
+    background-color: white;
+}
+
+.dropdownMenu a, .dropdownMenu button {
+    padding: 10px 15px;
+    text-align: left;
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdownMenu.dark a, 
+.dropdownMenu.dark button {
+    color: white;
+}
+
+.dropdownMenu.light a,
+.dropdownMenu.light button {
+    color: black;
+}
+.dropdownMenu a:hover, .dropdownMenu button:hover {
+    background-color: rgba(173, 216, 230, 0.607);
+}
+
+.userIcon:hover .dropdownMenu {
+    display: flex;
 }

@@ -1,0 +1,21 @@
+.cartContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.cartContainer.light{
+    background-color: #f0f0f0;
+}
+
+.cartContainer.dark{
+    background-color: #0f111a;
+}
+
+.cartContainer h1{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}

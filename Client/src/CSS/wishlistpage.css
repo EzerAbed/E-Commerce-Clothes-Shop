@@ -1,0 +1,36 @@
+.wishPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.wishPage.light{
+    background-color: #f0f0f0;
+}
+
+.wishPage.dark{
+    background-color: #0f111a;
+}
+
+.wishPage h1{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.shoppingButton{
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.shoppingButton:hover {
+    background-color: #0056b3;
+}

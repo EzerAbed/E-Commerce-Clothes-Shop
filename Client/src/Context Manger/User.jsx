@@ -2,11 +2,18 @@ import UserContext from "../Context/UserContext"
 import { useState, useEffect } from "react"
 
 const UserManger = ({ children }) => {
-    const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null)
+    const [user, setUser] = useState(() => {
+        const storedUser = localStorage.getItem('user');
+        return storedUser && storedUser !== "undefined" ? JSON.parse(storedUser) : null;
+    })
 
     //to prevent the user to disconnect on refresh
     useEffect(() => {
-        localStorage.setItem('user', JSON.stringify(user))
+        if (user) {
+            localStorage.setItem('user', JSON.stringify(user));
+        } else {
+            localStorage.removeItem('user');
+        }
     }, [user])
 
     return (

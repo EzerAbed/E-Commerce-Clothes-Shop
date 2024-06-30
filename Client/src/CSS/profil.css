@@ -119,3 +119,39 @@
     margin-bottom: 10px;
 }
 
+.left table{
+    width: 100%;
+}
+
+.left tr{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.left td{
+    padding: 10px;
+}
+
+.botSide ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botSide li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.botSide li.active {
+    color: #0A1172;
+    border-bottom: 2px solid #0A1172;
+}
+
+.botSide span{
+    padding-left: 10px;
+}

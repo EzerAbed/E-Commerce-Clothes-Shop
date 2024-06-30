@@ -1,0 +1,61 @@
+.editContainer {
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    background: none;
+}
+
+
+.editContainer form {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.editContainer label {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.editContainer input, .editContainer select {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    color: #b0b0b0;
+    
+}
+
+.username, .gender, .BD,
+.email, .address, .phone{
+    width: 610px;
+}
+
+.editContainer.dark input, .editContainer.dark select{
+    background-color: #3d3d3d; 
+}
+
+
+.editContainer button {
+    background-color: #4a90e2; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.editContainer button:hover {
+    background-color: #357ab8;
+}
+
+.social{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social input{
+    width: 390px;
+}

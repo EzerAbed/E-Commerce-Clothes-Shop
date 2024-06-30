@@ -4,11 +4,13 @@ import { useNavigate } from 'react-router-dom'
 import ThemeContext from "../Context/ThemeContext"
 import { toast, ToastContainer } from'react-toastify'
 import'react-toastify/dist/ReactToastify.css'
+import UserContext from '../Context/UserContext'
 
 const Login = () => {
 
     //context management
     let {theme} = useContext(ThemeContext)
+    let {setUser} = useContext(UserContext)
 
     //state Management
     const [email, setEmail] = useState('')
@@ -30,6 +32,30 @@ const Login = () => {
             return
         }
 
+        //sending the post request
+        let userInfo = {email, password}
+        fetch("http://localhost:8000/user/login", {
+            method : 'POST',
+            headers: {
+                "content-type":"application/json",
+            },
+            body : JSON.stringify(userInfo)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.message){
+                toast.error(data.message)
+            }
+            else{
+                toast.success(`Welcome back ${data.user.username}`)
+                setUser(prev => data.user)
+                setEmail('')
+                setPassword('')
+                setTimeout(() => {
+                    navigate('/');
+                }, 2000);
+            }
+        }) 
     }
 
 

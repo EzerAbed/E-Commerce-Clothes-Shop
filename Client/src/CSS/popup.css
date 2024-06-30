@@ -1,0 +1,80 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-inner {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    text-align: center;
+}
+
+.popup-inner.light{
+    background-color: white;
+}
+
+.popup-inner.dark{
+    background-color: #141824;
+}
+
+.popup-inner h2 {
+    margin-bottom: 20px;
+}
+
+.popup-inner form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-inner form label {
+    margin-bottom: 10px;
+}
+
+.popup-inner form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-inner.dark form input{
+    background-color: #20232a;
+    color: white;
+}
+
+.popup-inner form button {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-inner form button:hover {
+    background-color: darkblue;
+}
+
+.popup-inner button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-inner button:hover {
+    background-color: darkred;
+}
