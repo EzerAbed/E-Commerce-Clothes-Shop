@@ -1,0 +1,20 @@
+.checkOutPage{
+    width: 90%;
+    margin: auto;
+}
+
+.deliveryContainer{
+    border-bottom: 2px solid grey;
+}
+
+.shippingHeader {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+    
+
+.shippingHeader a{
+    text-decoration: none;
+    color: #007bff;
+}

@@ -1,0 +1,16 @@
+.ShippingDetails{
+    border-bottom: 2px grey solid;
+}
+
+.sName, .sAddress, .sPhone{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    padding: 10px;
+}
+
+.sName{
+    margin-top: 10px;
+}
+

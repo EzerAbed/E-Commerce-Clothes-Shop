@@ -1,0 +1,53 @@
+.shippingForm{
+    display: flex;
+    flex-wrap: wrap;
+    gap : 10px;
+}
+
+.shippingForm.dark input, .shippingForm.dark select{
+    background-color: #181c28;
+    color: white;
+}
+
+.shippingForm input{
+    height: 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding-left: 5px;
+    border: none;
+}
+
+.shippingForm input[type ="text"] {
+    width: 800px;
+}
+
+.shippingForm input[type ="email"], .shippingForm input[type ="tel"] {
+    width: 392px;
+}
+
+.shippingForm input[type ="number"] {
+    width: 392px;
+}
+
+.shippingForm select{
+    width: 392px;
+    margin-top: 10px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+}
+
+.shippingForm button[type = "submit"] {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 40px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.shippingForm button[type = "submit"]:hover {
+    background-color: #0056b3;
+}

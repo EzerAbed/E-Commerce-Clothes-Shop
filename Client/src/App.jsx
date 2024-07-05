@@ -13,6 +13,8 @@ import Wishlist from './Pages/Wishlist'
 import Cart from './Pages/Cart'
 import ProductDetails from './Pages/ProductDetails'
 import CheckOut from './Pages/CheckOut'
+import CheckOutLaydout from './Components/CheckOutLaydout'
+import ShippingPage from './Pages/Shipping'
 
 function App() {
   return (
@@ -27,7 +29,10 @@ function App() {
         <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/products/details' element={<ProductDetails />} />
-        <Route path='/checkout' element={<CheckOut />} />
+        <Route path='/checkout' element={<CheckOutLaydout/>}  >
+          <Route index element={<CheckOut />} />
+          <Route path='/checkout/shippingInfo' element={<ShippingPage />} />
+        </Route>
       </Route>
     </Routes>
   )

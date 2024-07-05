@@ -1,0 +1,40 @@
+.checkoutLayoutContainer{
+    width : 90%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.checkoutContaint{
+    display: flex;
+}
+
+.checkoutContaint main{
+    flex: 2;
+}
+
+.cartSummary{
+    width: 30%;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.summaryHeader{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.summaryHeader h3{
+    font-size: 24px;
+}
+
+.summaryHeader a{
+    color: #007bff;
+    text-decoration: none;
+}
+
+.summaryContainer a{
+    color: #007bff;
+    text-decoration: none;
+}
