@@ -2,10 +2,12 @@ import '../CSS/editProfile.css'
 import { useContext } from 'react'
 import ThemeContext from "../Context/ThemeContext"
 
+
 const Editprofile = () => {
 
     //context management
     let {theme} = useContext(ThemeContext)
+
     return(
         <div className={`editContainer ${theme}`}>
             <form action="">

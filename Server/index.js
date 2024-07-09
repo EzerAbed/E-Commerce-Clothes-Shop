@@ -6,6 +6,7 @@ const cors = require('cors')
 
 //importing the routes
 const userRoute = require('./Routes/User')
+const productRoute = require('./Routes/Products')
 
 //lanching the app
 const app = express()
@@ -17,6 +18,7 @@ app.use(cors("*"))
 
 //route definition
 app.use('/user', userRoute)
+app.use('/products', productRoute)
 
 //Database connection
 connectDB = async () =>{
