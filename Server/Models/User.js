@@ -2,6 +2,11 @@ const mongoose = require("mongoose")
 const bcrypt = require("bcrypt")
 const { type } = require("../Validation/User")
 
+const generateRandomPhoneNumber = () => {
+    const randomNumber = Math.floor(Math.random() * 9000000000) + 1000000000; // Generates a 10-digit number
+    return randomNumber.toString();
+};
+
 //definition of the Database Schema
 const userSchema = mongoose.Schema({
     username: {
@@ -38,7 +43,7 @@ const userSchema = mongoose.Schema({
         required: true,
         unique: true,
         trim: true,
-        default : 'add phone number'
+        default: generateRandomPhoneNumber
     },
 
     adress : {

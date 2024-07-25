@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useContext } from "react"
-import ThemeContext from "../Context/ThemeContext"
-import '../CSS/cart.css'
+import ThemeContext from "../../Context/ThemeContext"
+import '../../CSS/cart.css'
 
 const Cart = () => {
 

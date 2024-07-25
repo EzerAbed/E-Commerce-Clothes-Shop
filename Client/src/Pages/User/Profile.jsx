@@ -1,33 +1,54 @@
-import { useContext, useState } from 'react';
-import '../CSS/profil.css';
-import { FaKey, FaShoppingCart, FaHeart, FaUser } from "react-icons/fa";
-import { FaTrash } from "react-icons/fa6";
+import { useContext, useEffect, useState } from 'react';
+import '../../CSS/profil.css';
+import { FaKey, FaShoppingCart, FaHeart, FaUser, FaTrash } from "react-icons/fa";
 import { RiStarSFill } from "react-icons/ri";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import userImagePlaceholder from '../assets/userplaceholder.jpg';
-import ThemeContext from "../Context/ThemeContext";
-import Editprofile from '../Components/Editprofil';
-import Review from '../Components/Review';
-import Orders from '../Components/Orders';
-import Wishlist from '../Components/Wishlist';
-import ChangePasswordPopup from '../Components/ChangePwdPopUp';
-import UserContext from '../Context/UserContext';
+import ThemeContext from "../../Context/ThemeContext";
+import Editprofile from '../../Components/Editprofil';
+import Review from '../../Components/Review';
+import Orders from '../../Components/Orders';
+import Wishlist from '../../Components/Wishlist';
+import ChangePasswordPopup from '../../Components/ChangePwdPopUp';
+import DeleteAccountPopup from '../../Components/DeletePopup';
+import UserContext from '../../Context/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
-    // context management
     let { theme } = useContext(ThemeContext);
     let { user, setUser } = useContext(UserContext);
+    const navigate = useNavigate();
 
-    // State management
-    const [totalSpent, setTotalSpent ] = useState(0)
-    const [numberOrder, setNumberOrder] = useState(0)
-    const [numberReview, setNumberReview] = useState(0)
-    const [selectedTab, setSelectedTab] = useState('')
-    const [isPopupVisible, setIsPopupVisible] = useState(false)
+    const [totalSpent, setTotalSpent] = useState(0);
+    const [numberOrder, setNumberOrder] = useState(0);
+    const [numberReview, setNumberReview] = useState(0);
+    const [selectedTab, setSelectedTab] = useState('');
+    const [isPwdPopupVisible, setIsPwdPopupVisible] = useState(false);
+    const [isDeletePopupVisible, setIsDeletePopupVisible] = useState(false);
 
-    const togglePopup = () => {
-        setIsPopupVisible(!isPopupVisible);
+    const togglePwdPopup = () => {
+        setIsPwdPopupVisible(!isPwdPopupVisible);
+    };
+
+    const toggleDeletePopup = () => {
+        setIsDeletePopupVisible(!isDeletePopupVisible);
+    };
+
+    const deleteAccount = async () => {
+        try {
+            await fetch(`http://localhost:8000/user/delete/${user.id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ userId: user.id }),
+            });
+
+            setUser(null);
+            navigate('/login');
+        } catch (error) {
+            console.error('Error deleting account:', error);
+        }
     };
 
     const renderContent = () => {
@@ -45,20 +66,27 @@ const Profile = () => {
         }
     };
 
+    useEffect(() => {
+        if (!user) {
+            navigate('/login');
+            return;
+        }
+    }, [user]);
+
     return (
         <div className='profileContainer'>
             <div className='topSide'>
                 <h1>Profile</h1>
                 <div className='pbtns'>
-                    <button className='Del'><FaTrash /> <span>Delete Account</span></button>
-                    <button className='changePWD' onClick={togglePopup}><FaKey /><span>Change Password</span></button>
+                    <button className='Del' onClick={toggleDeletePopup}><FaTrash /> <span>Delete Account</span></button>
+                    <button className='changePWD' onClick={togglePwdPopup}><FaKey /><span>Change Password</span></button>
                 </div>
             </div>
 
             <div className='midSide'>
                 <div className={`right ${theme}`}>
                     <div className='profileDetailes'>
-                        <img src={userImagePlaceholder} alt="" />
+                        <img src={user.profileImage} alt="Photo De Profile" />
                         <div className='pDetailes'>
                             <h2> {user.username} </h2>
                             <p>created since {user.createdAT}</p>
@@ -94,7 +122,7 @@ const Profile = () => {
                 <div className={`left ${theme}`}>
                     <h2 className="header">Address</h2>
                     <div className='separator'></div>
-                    <table>
+                    <tbody>
                         <tr>
                             <td>Address</td>
                             <td>{user.adress}</td>
@@ -108,7 +136,7 @@ const Profile = () => {
                             <td>Phone</td>
                             <td>{user.phoneNumber}</td>
                         </tr>
-                    </table>
+                    </tbody>
                 </div>
             </div>
 
@@ -131,8 +159,8 @@ const Profile = () => {
                     {renderContent()}
                 </div>
 
-                {isPopupVisible && <ChangePasswordPopup togglePopup={togglePopup} />}
-                
+                {isPwdPopupVisible && <ChangePasswordPopup togglePopup={togglePwdPopup} />}
+                {isDeletePopupVisible && <DeleteAccountPopup togglePopup={toggleDeletePopup} deleteAccount={deleteAccount} />}
             </div>
         </div>
     );

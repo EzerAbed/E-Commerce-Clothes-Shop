@@ -1,11 +1,11 @@
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
-import '../CSS/productDetails.css'
+import '../../CSS/productDetails.css'
 import Rating from 'react-rating-stars-component'
 import { useContext, useState } from "react";
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import ThemeContext from "../Context/ThemeContext";
+import ThemeContext from "../../Context/ThemeContext";
 
 const ProductDetails = () => {
 

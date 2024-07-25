@@ -1,6 +1,6 @@
 import {  useState, useContext } from 'react'
-import '../CSS/shippingPage.css'
-import ThemeContext from "../Context/ThemeContext";
+import '../../CSS/shippingPage.css'
+import ThemeContext from "../../Context/ThemeContext";
 
 const ShippingPage = () => {
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import '../CSS/wishlistpage.css'
+import '../../CSS/wishlistpage.css'
 import { useContext } from "react"
-import ThemeContext from "../Context/ThemeContext"
+import ThemeContext from "../../Context/ThemeContext"
 
 const Wishlist = () => {
 

@@ -80,7 +80,6 @@ const Navbar = () => {
                     <li><Link to="/products">Products</Link></li>
                     <li><Link to="/wishlist">Wishlist</Link></li>
                     <li><Link to="/checkout/shippingInfo">Shipping Info</Link></li>
-                    <li><Link to="#">Track order</Link></li>
                     <li><Link to="/checkout">Checkout</Link></li>
                 </ul>
             </div>

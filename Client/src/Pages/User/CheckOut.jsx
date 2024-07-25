@@ -1,7 +1,6 @@
-import '../CSS/checkOut.css'
+import '../../CSS/checkOut.css'
 import { Link } from "react-router-dom"
-
-import ShippingBilling from '../Components/ShippingBilling';
+import ShippingBilling from '../../Components/ShippingBilling';
 import { useState } from 'react';
 
 const CheckOut =  () => {
@@ -9,6 +8,7 @@ const CheckOut =  () => {
     //state management
     const [isChecked, setIsChecked] = useState(true)
     const [totalPrice, setTotalPrice] = useState(0)
+
 
     return(
         <div className="checkOutPage">

@@ -1,10 +1,10 @@
-import '../CSS/login.css'
+import '../../CSS/login.css'
 import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import ThemeContext from "../Context/ThemeContext"
+import ThemeContext from "../../Context/ThemeContext"
 import { toast, ToastContainer } from'react-toastify'
 import'react-toastify/dist/ReactToastify.css'
-import UserContext from '../Context/UserContext'
+import UserContext from '../../Context/UserContext'
 
 const Login = () => {
 

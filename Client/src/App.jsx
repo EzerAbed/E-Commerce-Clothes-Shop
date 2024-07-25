@@ -4,17 +4,20 @@ import { Route, Routes } from 'react-router-dom'
 //layout and Page importations
 import Layout from './Pages/Layout'
 import Home from './Pages/Home'
-import SignUp from './Pages/SignUp'
-import Login from './Pages/LogIn'
-import Products from './Pages/Products'
+import SignUp from './Pages/User/SignUp'
+import Login from './Pages/User/LogIn'
+import Products from './Pages/Prod/Products'
 import NotFound from './Pages/NotFound'
-import Profile from './Pages/Profile'
-import Wishlist from './Pages/Wishlist'
-import Cart from './Pages/Cart'
-import ProductDetails from './Pages/ProductDetails'
-import CheckOut from './Pages/CheckOut'
+import Profile from './Pages/User/Profile'
+import Wishlist from './Pages/Prod/Wishlist'
+import Cart from './Pages/User/Cart'
+import ProductDetails from './Pages/Prod/ProductDetails'
+import CheckOut from './Pages/User/CheckOut'
 import CheckOutLaydout from './Components/CheckOutLaydout'
-import ShippingPage from './Pages/Shipping'
+import ShippingPage from './Pages/User/Shipping'
+import Dashboard from './Pages/Admin/Dashboard'
+import AdminLayout from './Components/AdminLayout'
+import ProductAdminPage from './Pages/Admin/ProductAdminPage'
 
 function App() {
   return (
@@ -33,6 +36,10 @@ function App() {
           <Route index element={<CheckOut />} />
           <Route path='/checkout/shippingInfo' element={<ShippingPage />} />
         </Route>
+      </Route>
+      <Route path='/admin' element={<AdminLayout />}  >
+        <Route index element={<Dashboard />} />
+        <Route path='/admin/product' element={<ProductAdminPage/> } />
       </Route>
     </Routes>
   )

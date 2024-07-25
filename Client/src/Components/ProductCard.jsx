@@ -29,7 +29,6 @@ const ProductCard = ({ image, title, price, rating, raters, colors }) => {
                 />
                 <p className="raters">({raters} people rated)</p>
                 <p className="price">{price} DT</p>
-                <p className="colors">{colors} colors</p>
             </div>
 
         </div>

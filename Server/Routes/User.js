@@ -15,6 +15,6 @@ router.post('/editPassword', upadatUserPassword)
 //PUT Requists
 
 //DELETE Requists
-router.delete("/:id", deleteUserById)
+router.delete("/delete/:id", deleteUserById)
 
 module.exports = router

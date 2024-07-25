@@ -1,10 +1,10 @@
-import '../CSS/signUp.css'
+import '../../CSS/signUp.css'
 import { useState, useContext } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useNavigate } from 'react-router-dom'
-import ThemeContext from "../Context/ThemeContext"
-import UserContext from "../Context/UserContext"
+import ThemeContext from "../../Context/ThemeContext"
+import UserContext from "../../Context/UserContext"
 
 const SignUp = () => {
 

@@ -7,7 +7,7 @@ const { getAllProducts,
         getProductById,
         createProduct,
         updateProduct,
-        deleteProduct, } = require('../Controllers/Product')
+        deleteProduct, } = require('../Controllers/Products')
 
 //GET Requists
 router.get("/", getAllProducts)
@@ -25,4 +25,4 @@ router.put("/updateProduct", updateProduct)
 
 router.delete("/delete/:id", deleteProduct)
 
-module.exports = productRouter
+module.exports = router
